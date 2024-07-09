@@ -60,7 +60,7 @@ export default function Home({ navigation }) {
       <Text style={styles.title}>Bienvenid@ al sistema</Text>
       <Text style={styles.subtitle}>
         { /*correo ? correo : 'No hay correo para mostrar'*/}
-        {nombre ? nombre : 'No hay Nombre para mostrar'}
+        {nombre ? nombre : 'Nuestros Productos de la mejor calidad'}
       </Text>
       <Buttons
         textoBoton='Cerrar Sesión'

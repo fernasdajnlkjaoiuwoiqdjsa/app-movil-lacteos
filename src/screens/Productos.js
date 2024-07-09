@@ -13,8 +13,6 @@ export default function Productos({ navigation }) {
 
   const ip = Constantes.IP;
   const [dataProductos, setDataProductos] = useState([])
-  const [dataCategorias, setDataCategorias] = useState([])
-  const [selectedValue, setSelectedValue] = useState(null);
   const [cantidad, setCantidad] = useState('');
   const [modalVisible, setModalVisible] = useState(false)
   const [idProductoModal, setIdProductoModal] = useState('')
@@ -55,37 +53,6 @@ export default function Productos({ navigation }) {
     setNombreProductoModal(nombre)
   }
 
-  //getCategorias Funcion para consultar por medio de una peticion GET los datos de la tabla categoria que se encuentran en la base de datos
-  const getProductos = async (idCategoriaSelect = 1) => {
-    try {
-      if (idCategoriaSelect <= 0) //validar que vaya seleccionada una categoria de productos
-      {
-        return
-      }
-      const formData = new FormData();
-      formData.append('idProducto', idCategoriaSelect);
-      //utilizar la direccion IP del servidor y no localhost
-      const response = await fetch(`${ip}/lacteos_queso/api/services/public/catalogo.php?action=readProductosCatalogo`, {
-        method: 'POST',
-        body: formData
-      });
-
-      const data = await response.json();
-      console.log("data al obtener productos  \n", data)
-      if (data.status) {
-        console.log("trae datos el dataset", data)
-        setDataProductos(data.dataset)
-      } else {
-        console.log("Data en el ELSE error productos", data);
-        // Alert the user about the error
-        Alert.alert('Error productos', data.error);
-      }
-    } catch (error) {
-      console.error(error, "Error desde Catch");
-      Alert.alert('Error', 'Ocurrió un error al listar los productos');
-    }
-  }
-
   const getCatalogo = async () => {
     try {
 
@@ -96,7 +63,7 @@ export default function Productos({ navigation }) {
 
       const data = await response.json();
       if (data.status) {
-        setDataCategorias(data.dataset)
+        setDataProductos(data.dataset)
       } else {
         console.log(data);
         // Alert the user about the error
@@ -107,14 +74,9 @@ export default function Productos({ navigation }) {
     }
   }
 
-  const handleCategoriaChange = (itemValue, itemIndex) => {
-    setSelectedCategoria(itemValue);
-  };
-
   //Uso del React Hook UseEffect para que cada vez que se cargue la vista por primera vez
   //se ejecute la funcion getCategorias
   useEffect(() => {
-    getProductos();
     getCatalogo();
   }, []);
 
@@ -146,17 +108,6 @@ export default function Productos({ navigation }) {
           Selecciona un catalogo
         </Text>
 
-        <View style={styles.pickerContainer}>
-          <RNPickerSelect
-            style={{ inputAndroid: styles.picker }}
-            onValueChange={(value) => getProductos(value)}
-            placeholder={{ label: 'Selecciona un catalogo...', value: null }}
-            items={dataCategorias.map(catalogoproductos => ({
-              label: catalogoproductos.nombre_catalogo,
-              value: catalogoproductos.id_catalogo,
-            }))}
-          />
-        </View>
 
       </View>
 

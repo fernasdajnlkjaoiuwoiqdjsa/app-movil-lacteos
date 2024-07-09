@@ -14,7 +14,7 @@ export default function Sesion({ navigation }) {
 
   const validarSesion = async () => {
     try {
-      const response = await fetch(`${ip}/coffeeshop/api/services/public/cliente.php?action=getUser`, {
+      const response = await fetch(`${ip}/lacteos_queso/api/services/public/cliente.php?action=getUser`, {
         method: 'GET'
       });
   
