@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#2A8C4A',
+    color: '#5C3D2E',
     fontSize: 16,
     fontWeight: '600'
   },
@@ -243,14 +243,14 @@ const styles = StyleSheet.create({
   },
   pickerContainer: {
     borderWidth: 1,
-    borderColor: '#AF8260', // Color del borde
+    borderColor: '#5C3D2E', // Color del borde
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,
-    backgroundColor: '#AF8260', // Color de fondo
+    backgroundColor: '#5C3D2E', // Color de fondo
   },
   picker: {
-    color: '#ffffff'
+    color: '#5C3D2E'
   },
 });
