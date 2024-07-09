@@ -17,9 +17,9 @@ export default function Sesion({ navigation }) {
       const response = await fetch(`${ip}/lacteos_queso/api/services/public/cliente.php?action=getUser`, {
         method: 'GET'
       });
-  
+
       const data = await response.json();
-  
+
       if (data.status === 1) {
         cerrarSesion();
         console.log("Se eliminó la sesión")
@@ -93,6 +93,7 @@ export default function Sesion({ navigation }) {
       />
       <Text style={styles.texto}>Iniciar Sesión</Text>
       <Input
+        style={styles.imput}
         placeHolder='Ingrese su Correo'
         setValor={usuario}
         setTextChange={setUsuario}
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   texto: {
-    color: '#322C2B', fontWeight: '900',
+    color: '#5C3D2E', fontWeight: '900',
     fontSize: 20
   },
   textRegistrar: {
@@ -131,5 +132,13 @@ const styles = StyleSheet.create({
     height: 75,
     marginBottom: 10
   },
+  imput:{
+    width: 300,
+    padding: 10,
+    borderColor: '#ccc',
+    backgroundColor: '#ffffff',
+  }
   
+
+
 });

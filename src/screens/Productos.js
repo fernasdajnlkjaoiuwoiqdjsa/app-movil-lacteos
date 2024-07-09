@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   cartButtonText: {
-    color: '#ffffff',
+    color: '#5C3D2E',
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 10,
