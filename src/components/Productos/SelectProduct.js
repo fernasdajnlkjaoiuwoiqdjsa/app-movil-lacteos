@@ -19,6 +19,9 @@ export default function SelectProduct({ip, idCatalogo, nombreProducto, descripci
        <Text style={styles.textTitle}>Existencias: <Text style={styles.textDentro}>{existenciasProducto} {(existenciasProducto===1) ?'Unidad':'Unidades'}</Text></Text>
        <TouchableOpacity style={styles.button} onPress={accionBotonProducto}>
          <Text style={styles.buttonText}>Seleccionar Producto</Text>
+
+
+         
        </TouchableOpacity>
        <View style={styles.inputContainer}>
         <Text>Ingresar Cantidad: </Text>

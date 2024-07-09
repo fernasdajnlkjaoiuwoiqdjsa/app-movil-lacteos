@@ -15,7 +15,6 @@ export default function InputMultiline({placeHolder, setValor, contra, valor}) {
     multiline={true}
     numberOfLines={4}
     />
-
   );
 }
 

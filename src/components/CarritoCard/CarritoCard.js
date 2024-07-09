@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
   },
   modifyButton: {
     borderWidth: 1,
-    borderColor: '#8F6B58',
+    borderColor: '#64C27B',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 16,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   deleteButton: {
     borderWidth: 1,
-    borderColor: '#D2691E',
+    borderColor: '#64C27B',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 16,
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   finalButton: {
-    backgroundColor: '#A0522D', // Sienna color for final action buttons
+    backgroundColor: '#64C27B', // Sienna color for final action buttons
     padding: 16,
     borderRadius: 8,
     marginVertical: 8,

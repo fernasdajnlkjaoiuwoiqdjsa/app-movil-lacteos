@@ -26,7 +26,7 @@ export default function ProductoCard({ ip, idCatalogo, nombreProducto, descripci
       <TouchableOpacity
         style={styles.cartButton}
         onPress={accionBotonProducto}>
-        <FontAwesome name="plus-circle" size={24} color="white" />
+        <FontAwesome name="plus-circle" size={24} color="green" />
         <Text style={styles.cartButtonText}>Seleccionar Producto</Text>
       </TouchableOpacity>
     </View>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   button: {
-    backgroundColor: '#AF8260',
+    backgroundColor: '#64C27B',
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
