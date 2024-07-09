@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   cartButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#AF8260',
+    backgroundColor: 'green',
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
