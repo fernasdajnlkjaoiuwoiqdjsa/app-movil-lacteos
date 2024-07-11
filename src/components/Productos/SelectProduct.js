@@ -19,6 +19,9 @@ export default function SelectProduct({ip, idCatalogo, nombreProducto, descripci
        <Text style={styles.textTitle}>Existencias: <Text style={styles.textDentro}>{existenciasProducto} {(existenciasProducto===1) ?'Unidad':'Unidades'}</Text></Text>
        <TouchableOpacity style={styles.button} onPress={accionBotonProducto}>
          <Text style={styles.buttonText}>Seleccionar Producto</Text>
+
+
+         
        </TouchableOpacity>
        <View style={styles.inputContainer}>
         <Text>Ingresar Cantidad: </Text>
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
       marginTop: StatusBar.currentHeight || 0,
     },
     card: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#5C3D2E',
         borderRadius: 8,
         padding: 16,
         marginVertical: 8,
@@ -84,14 +87,14 @@ const styles = StyleSheet.create({
         marginLeft: 8,
       },
       button: {
-        backgroundColor: '#AF8260',
+        backgroundColor: '#5C3D2E',
         borderRadius: 5,
         paddingVertical: 10,
         paddingHorizontal: 20,
         alignItems: 'center',
       },
       buttonText: {
-        color: '#ffffff',
+        color: '#5C3D2E',
         fontSize: 16,
         fontWeight:'600'
       },

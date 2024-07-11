@@ -64,7 +64,7 @@ export default function SignUp({ navigation }) {
             console.log('valor de formdata', formData)
 
 
-            const response = await fetch(`${ip}/lacteos_queso/api/services/public/cliente.php?action=signUpMovil`, {
+            const response = await fetch(`${ip}/lacteos_queso/api/services/public/cliente.php?action=signUpMovill`, {
                 method: 'POST',
                 body: formData
             });
@@ -109,7 +109,7 @@ return (
                     valor={direccion}
                     setTextChange={setDireccion} />
 
-<Input
+                <Input
                     placeHolder='Telefono'
                     setValor={telefono}
                     setTextChange={setTelefono}

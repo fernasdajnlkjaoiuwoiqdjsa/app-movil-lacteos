@@ -8,6 +8,7 @@
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/vacita-removebg-preview.png",
+      "name": "Lacteos Doña Queso",
       "resizeMode": "contain",
       "backgroundColor": "#DCFFEA"
     },
